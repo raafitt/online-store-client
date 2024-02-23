@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/online-store-client/static/js/main.f3284b06.js",
+    "index.html": "/online-store-client/index.html",
+    "main.f3284b06.js.map": "/online-store-client/static/js/main.f3284b06.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f3284b06.js"
+  ]
+}
