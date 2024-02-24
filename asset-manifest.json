@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/online-store-client/static/js/main.f3284b06.js",
+    "main.js": "/online-store-client/static/js/main.ff1756dd.js",
     "index.html": "/online-store-client/index.html",
-    "main.f3284b06.js.map": "/online-store-client/static/js/main.f3284b06.js.map"
+    "main.ff1756dd.js.map": "/online-store-client/static/js/main.ff1756dd.js.map"
   },
   "entrypoints": [
-    "static/js/main.f3284b06.js"
+    "static/js/main.ff1756dd.js"
   ]
 }
