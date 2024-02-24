@@ -14,7 +14,7 @@ const App=observer(()=>{
   const {user}=useContext(Context)
   
   const[loading, setLoading]=useState(true)
-  console.log('Авторизован '+user.isAuth)
+
 
   const getTypes=async()=>{
     return await fetchTypes()
