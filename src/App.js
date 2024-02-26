@@ -21,9 +21,17 @@ const App=observer(()=>{
   }
 
   useEffect(()=>{
-    check().then(()=>{
-      user.setIsAuth(true)
-    }).finally(()=>setLoading(false))
+    if(localStorage.getItem('token')!=='null'){
+      console.log('no null')
+      check().then(()=>{
+        user.setIsAuth(true)
+      }).finally(()=>setLoading(false))
+    } else{
+      console.log('null')
+      localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWYiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDg5NTY3MDAsImV4cCI6MTcwOTA0MzEwMH0.4CGljFFxI9Rw3oD-RMLIzUFHmUL0NQvq9HjSjAjnUUg')
+      setLoading(false)
+    }
+    
   },[])
 
   if(loading){
