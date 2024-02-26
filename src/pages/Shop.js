@@ -18,7 +18,10 @@ const Shop = observer(() => {
     const [selectedPage,setSelectedPage]=useState(1)
     let items = [];
     const[loading, setLoading]=useState(true)
-    const {role}=jwtDecode(localStorage.getItem('token'))
+    if(localStorage.getItem('token')!==null){
+        var role= jwtDecode(localStorage.getItem('token')).role
+    }else var role='USER'
+   
     
 
     const getPages=(count,limit)=>{

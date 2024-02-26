@@ -9,7 +9,10 @@ const $authHost=axios.create({
 })
 
 const authInterceptor=(config)=>{
-    config.headers.authorization = `Bearer ${localStorage.getItem('token')}`
+    if(localStorage.getItem('token')!==null) {config.headers.authorization = `Bearer ${localStorage.getItem('token')}` 
+    console.log('no null')}
+    else config.headers.authorization = `Bearer 4CGljFFxI9Rw3oD-RMLIzUFHmUL0N`
+    
     return config
 }
 

@@ -12,9 +12,9 @@ import { jwtDecode } from 'jwt-decode';
 const NavBar = observer(() => {
     const {user} =useContext(Context)
     const route=useNavigate()
-    if(localStorage.getItem('token')!=='null'){
+    if(localStorage.getItem('token')!==null){
         var role= jwtDecode(localStorage.getItem('token')).role
-    }else localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWYiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3MDg5NTY3MDAsImV4cCI6MTcwOTA0MzEwMH0.4CGljFFxI9Rw3oD-RMLIzUFHmUL0NQvq9HjSjAjnUUg')
+    }else var role='USER'
     
     console.log(role)
     const logOut=()=>{

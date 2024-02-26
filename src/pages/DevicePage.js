@@ -14,7 +14,10 @@ import { reaction } from 'mobx';
 const DevicePage = observer(() => {
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
-    const user_id = jwtDecode(localStorage.getItem('token')).id;
+    if(localStorage.getItem('token') !== null){
+        var user_id = jwtDecode(localStorage.getItem('token')).id;
+    }
+    
     const { user, device } = useContext(Context);
     const router = useNavigate();
 
